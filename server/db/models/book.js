@@ -3,7 +3,7 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Book = db.define('book', {
-  bookId: {
+  bookID: {
     type: Sequelize.INTEGER,
     allowNull: false,
     primaryKey: true,
@@ -13,7 +13,7 @@ const Book = db.define('book', {
       isInt: true
     }
   },
-  bookName: {
+  title: {
     type: Sequelize.STRING,
     allowNull: false,
     unique: true,
@@ -21,7 +21,35 @@ const Book = db.define('book', {
       notEmpty: true
     }
   },
-  authorName: {
+  authors: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  averageRating: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  isbn: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  isbn13: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  languageCode: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
@@ -32,8 +60,42 @@ const Book = db.define('book', {
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
-      notEmpty: true,
-      isNumeric: true
+      notEmpty: true
+    }
+  },
+  numPages: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  ratingsCount: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  textReviewsCount: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  publicationDate: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  publisher: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
     }
   },
   quantity: {

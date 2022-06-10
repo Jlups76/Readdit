@@ -1,5 +1,4 @@
 import axios from 'axios'
-import {noExtendLeft} from 'sequelize/types/lib/operators'
 
 const FETCH_BOOKS = 'FETCH_BOOKS'
 const DELETE_BOOK = 'DELETE_BOOK'
@@ -75,5 +74,16 @@ export function createSingleBook(payload) {
     } catch (err) {
       console.log(err)
     }
+  }
+}
+
+const defaultState = []
+
+export default function booksReducer(state = defaultState, action) {
+  switch (action.type) {
+    case FETCH_BOOKS:
+      return [...state, ...action.books]
+    default:
+      return state
   }
 }

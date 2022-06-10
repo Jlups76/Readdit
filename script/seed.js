@@ -19,6 +19,13 @@ async function seed() {
       authorName: 'Jesus',
       price: 1999,
       quantity: 7
+    }),
+    Book.create({
+      bookId: 2,
+      bookName: 'The Cool Book',
+      authorName: 'Fanzi',
+      price: 1499,
+      quantity: 3
     })
   ])
 

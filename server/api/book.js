@@ -1,14 +1,13 @@
 const router = require('express').Router()
-const {models: {Book}} = require('../db')
+const Book = require('../db/models/book')
 module.exports = router
 
 //GET all books
 router.get('/', async (req, res, next) => {
   try {
-    const books = await Book.findAll({
-      attributes: ['bookName', 'authorName', 'quantity', ' price']
-    })
-    res.json(books)
+    const books = await Book.findAll()
+    console.log(books)
+    res.send(books)
   } catch (err) {
     next(err)
   }
