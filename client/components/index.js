@@ -6,5 +6,5 @@
 export {default as Navbar} from './navbar'
 export {default as UserHome} from './user-home'
 export {default as Books} from './books'
-export {default as bookParser} from './bookParser'
+export {default as Paginated} from './PaginationBooks'
 export {Login, Signup} from './auth-form'

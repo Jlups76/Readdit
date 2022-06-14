@@ -4,23 +4,25 @@ import {Link} from 'react-router-dom'
 import {getAllBooks} from '../store/book'
 
 const books = props => {
+  console.log(props, 'book props')
   const dispatch = useDispatch()
-  const Books = useSelector(state => state.books)
+  // const Books = useSelector(state => state.books)
   useEffect(() => {
     dispatch(getAllBooks())
   }, [])
-  console.log(Books)
+
   return (
     <div>
       <h2>All Books</h2>
-      {Books.length ? (
+      {props.books.length ? (
         <div>
-          {Books.map(book => {
+          {props.books.map(book => {
+            console.log(book, 'single Book')
             return (
-              <div key={book.bookId} id="singleBook">
-                <h3>Title:{book.bookName}</h3>
-                <h4>Author:{book.authorName}</h4>
-                <h4>Price:{book.price / 100}</h4>
+              <div key={book.bookID} id="singleBook">
+                <h3>Title:{book.title}</h3>
+                <h4>Author:{book.authors}</h4>
+                {/* <h4>Price:{book.price / 100}</h4> */}
                 <h4>
                   Current Inventory:{book.quantity
                     ? book.quantity
