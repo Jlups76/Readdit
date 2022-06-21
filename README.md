@@ -1,59 +1,49 @@
-# Boilermaker
+# Readdot
 
-_Good things come in pairs_
+_Good things come in BOOKS_
 
-Looking to mix up a backend with `express`/`sequelize` and a frontend with
-`react`/`redux`? That's `boilermaker`!
+Welcome to Readdit! This app is a "work in progress" random book suggester and recomendation engine
+it is geared to help individuals both discover new books they may not have hear of and recieve recomendations 
+for books they are likely to enjoy! 
 
-Follow along with the boilerplate workshop to make your own! This canonical
-version can serve as a reference, or a starting point. For an in depth
-discussion into the code that makes up this repository, see the
-[Boilermaker Guided Tour][boilermaker-yt]
+(If you have any suggestions on how to improve this app as I work on it PLEASE reach out and let me know!
+I wouold love to collaborate)
 
-[boilermaker-yt]: https://www.youtube.com/playlist?list=PLx0iOsdUOUmn7D5XL4mRUftn8hvAJGs8H
 
 ## Setup
 
-To use this as boilerplate, you'll need to take the following steps:
+***NOT YET DEPLOYED***
 
-* Don't fork or clone this repo! Instead, create a new, empty
-  directory on your machine and `git init` (or create an empty repo on
-  Github and clone it to your local machine)
-* Run the following commands:
-
+If youd like to collaborate reach out!
+set up:
 ```
-git remote add boilermaker https://github.com/FullstackAcademy/boilermaker.git
-git fetch boilermaker
-git merge boilermaker/master
+git remote add Readdit https://github.com/Jlups76/Readdit
+git fetch Readdit
+git merge Readdit/main
 ```
 
-Why did we do that? Because every once in a while, `boilermaker` may
+Why did we do that? Because every once in a while, `Readdit` may
 be updated with additional features or bug fixes, and you can easily
 get those changes from now on by entering:
 
 ```
-git fetch boilermaker
-git merge boilermaker/master
+git fetch Readdit
+git merge Readdit/maine
 ```
-
-## Customize
 
 Now that you've got the code, follow these steps to get acclimated:
 
-* Update project name and description in `package.json` and
-  `.travis.yml` files
-* `npm install`
-* Create two postgres databases (`MY_APP_NAME` should match the `name`
+* Create two postgres databases (`Readdit` should match the `name`
   parameter in `package.json`):
 
 ```
-export MY_APP_NAME=boilermaker
-createdb $MY_APP_NAME
-createdb $MY_APP_NAME-test
+export MY_APP_NAME=Readdit
+createdb $Readdit
+createdb $Readdit-test
 ```
 
-* By default, running `npm test` will use `boilermaker-test`, while
-  regular development uses `boilermaker`
+* By default, running `npm test` will use `Readdit-test`, while
+  regular development uses `Readdit`
 * Create a file called `secrets.js` in the project root
   * This file is listed in `.gitignore`, and will _only_ be required
     in your _development_ environment
