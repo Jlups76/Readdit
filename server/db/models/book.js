@@ -3,7 +3,7 @@ const db = require('../db')
 
 const Book = db.define('book', {
   bookID: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     primaryKey: true,
     validate: {
       notEmpty: true,
@@ -13,7 +13,6 @@ const Book = db.define('book', {
   },
   title: {
     type: Sequelize.STRING,
-    unique: true,
     validate: {
       notEmpty: true
     }
@@ -25,19 +24,19 @@ const Book = db.define('book', {
     }
   },
   averageRating: {
-    type: Sequelize.FLOAT,
+    type: Sequelize.STRING(1234),
     validate: {
       notEmpty: true
     }
   },
   isbn: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     validate: {
       notEmpty: true
     }
   },
   isbn13: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     validate: {
       notEmpty: true
     }
@@ -49,7 +48,7 @@ const Book = db.define('book', {
     }
   },
   price: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     validate: {
       notEmpty: true
     }
@@ -61,13 +60,13 @@ const Book = db.define('book', {
     }
   },
   ratingsCount: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     validate: {
       notEmpty: true
     }
   },
   textReviewsCount: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     validate: {
       notEmpty: true
     }
@@ -85,7 +84,7 @@ const Book = db.define('book', {
     }
   },
   quantity: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     validate: {
       notEmpty: true,
       isNumeric: true,
