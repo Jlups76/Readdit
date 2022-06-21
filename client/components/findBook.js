@@ -3,17 +3,14 @@ import React, {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 // import {Link} from 'react-router-dom'
 import {getAllBooks} from '../store/book'
-const bookcovers = require('bookcovers')
 
 const findBook = () => {
   const dispatch = useDispatch()
 
   const Books = useSelector(state => state.books)
-
   const [singleBook, setSingleBook] = useState(
     Books[Math.floor(Math.random() * Books.length)]
   )
-  const [bookcover, setBookCover] = useState()
 
   useEffect(() => {
     dispatch(getAllBooks())
@@ -23,9 +20,7 @@ const findBook = () => {
 
   const findSingleBook = () => {
     setSingleBook(Books[Math.floor(Math.random() * Books.length)])
-    bookcovers.withIsbn(singleBook.isbn).then(results => console.log(results))
   }
-
   console.log(singleBook)
   return (
     <div>
