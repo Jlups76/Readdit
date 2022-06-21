@@ -60,3 +60,15 @@ if (module === require.main) {
 
 // we export the seed function for testing purposes (see `./seed.spec.js`)
 module.exports = seed
+// © 2022 GitHub, Inc.
+// Terms
+// Privacy
+// Security
+// Status
+// Docs
+// Contact GitHub
+// Pricing
+// API
+// Training
+// Blog
+// About
